@@ -24,5 +24,6 @@ select x.OfficeType, AvgCurrentRent = avg(t.TotalMonthlyRent)
 from tenant t
 join x
 on t.TenantId = x.TenantId
+where t.Active = 1
 group by x.OfficeType
 
